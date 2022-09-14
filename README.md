@@ -61,7 +61,7 @@ Finally it would be interesting to add a README in [this repository](https://git
 
 **Expected outcomes**: To implement and complete CI/CD builds for Windows, Linux and MacOS in order to provide cross-platform binary distributions of MetaCall.
 
-**Possible mentors**: Harsh Bardhan Mishra, Gil Arasa Verge, Vicente Eduardo Ferrer Garcia
+**Possible mentors**: ??
 
 **Resources**:
  - Guix Build System options: https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
@@ -144,9 +144,10 @@ The final result of this project should be to be able to debug a polyglot applic
 
 
 
+
 ## Find Us
 
-The three chats are bridged by Matrix (messages sent from one can be seen from all).
+The three chats are bridged by Matrix (messages sent from one, on the main room/channel, can be seen from all).
 
 
 Telegram:
