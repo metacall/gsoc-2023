@@ -74,7 +74,7 @@ For better deployment, the MetaCall FaaS should be integrable with MetaCall CLI,
 
 **Expected outcomes**: An embeddable library that can be used for locally testing MetaCall projects as if they were hosted on the FaaS.
 
-**Possible mentors**: Thomas Rory Gummerson, Jose Antonio Dominguez, Alexandre Gimenez Fernandez, Vicente Eduardo Ferrer Garcia
+**Possible mentors**: Thomas Rory Gummerson, Jose Antonio Dominguez, Alexandre Gimenez Fernandez
 
 **Resources**:
  - MetaCall FaaS TypeScript reimplementation repository: https://github.com/metacall/faas
@@ -102,16 +102,160 @@ This project has to be efficient and sandboxed, focused on FaaS development and 
 
 **Possible mentors**:  Fernando Vaño Garcia, Vicente Eduardo Ferrer Garcia, Gil Arasa Verge
 
+### MacOS Distributable
+
+**Skills**: C/C++ Dependency Management, CMake, Bash, DevOps
+
+**Expected size of the project**: Large (350 hours)
+
+**Difficulty rating**: Hard
+
+**Description**:
+
+MetaCall has multiple runtimes embedded on it and one of its objectives is to be as cross platform as possible. Each runtime has its own dependencies which create a huge dependency tree sometimes. This is a big complexity that is difficult to handle. Currently we are using Guix as our build system in Linux and we achieved to compile MetaCall and make it completely self-contained (in Linux for amd64 at the moment of writting). This allows MetaCall to be installed even in a BusyBox and work properly without any other system dependency. Current implementation of the build system consist of 3 repositories:
+
+ - Distributable Linux: https://github.com/metacall/distributable-linux
+ - Distributable Windows: https://github.com/metacall/distributable-windows
+ - Distributable MacOs: https://github.com/metacall/distributable-macos
+
+The objective of this idea is to improve the MacOS support:
+ - Implementing the build script for MacOs with portable dependencies on the automated CI, in a similar way to how Windows distributable has been done.
+ - Add tests in order to verify the MacOs portable installation.
+ - Improve the install script for Linux [by adding support to MacOs](https://github.com/metacall/install/blob/0f145d4ee5a60b58f7c48f043ed7d0b7d6268609/install.sh#L210) so it can support both platforms at the same time, this will require testing with MacOs too, so another CI with MacOs as runner should be implemented in order to test it through the install script.
+
+**Expected outcomes**: To implement and complete CI/CD builds for MacOS in order to provide cross-platform binary distributions of MetaCall with the maximum amount of languages possible. Extend the current install script for taking into account MacOs and provide testing environment for the MacOs distributable itself and the install script for MacOs.
+
+**Possible mentors**: Vicente Eduardo Ferrer Garcia, Gil Arasa Verge
+
+### Windows Distributable
+
+**Skills**: C/C++ Depependency Management, CMake, PowerShell, DevOps
+
+**Expected size of the project**: Medium (175 hours)
+
+**Difficulty rating**: Medium
+
+**Description**:
+
+At the moment of writing, Windows distributable has a base already implemented. It provides support for portable installation of MetaCall Core with tests and install script. But it is incomplete, it only supports Python and NodeJS. The main objective of this project will be to extend the support and make it more complete and stable. The requirements are:
+
+ - Improving the language support[[1]](https://github.com/metacall/distributable-windows/issues/14)[[2]](https://github.com/metacall/distributable-windows/issues/13), improving the existing ones that do not work and adding new ones.
+ - Improve the [respective tests](https://github.com/metacall/distributable-windows/blob/master/test.bat) for the new languages added.
+ - Improve the [install script](https://github.com/metacall/install/blob/master/install.ps1) with its [respective tests](https://github.com/metacall/install/blob/master/.github/workflows/test-windows.yml).
+
+**Expected outcomes**: To implement and complete CI/CD builds for Windows in order to provide cross-platform binary distributions of MetaCall with the maximum amount of languages possible. Extend the current Windows install script and extend the testing environment for the Windows distributable itself and the install script for Windows.
+
+**Possible mentors**: Fernando Vaño Garcia, Thomas Rory Gummerson, Gil Arasa Verge
+
+**Resources**:
+ - MetaCall Core Windows Environment Install Script: https://github.com/metacall/core/blob/develop/tools/metacall-environment.ps1
+
+### Linux Distributable
+
+**Skills**: C/C++ Depependency Management, CMake, Guix, Guile, Bash, Docker, BuildKit, DevOps
+
+**Expected size of the project**: Medium (175 hours)
+
+**Difficulty rating**: Hard
+
+**Description**:
+
+At the moment of writing, Linux distributable is one of the best suited distributions that we have right now. But it is not completed and it has [some issues](https://github.com/metacall/distributable-linux/issues). The main objective of this project will be to solve those issues, either focused on the user experience or the development of other applications by means of using MetaCall Core embedded into them. Here's the list of the objectives:
+
+ - Solve issues related to environment variables[[1]](https://github.com/metacall/distributable-linux/issues/5)[[2]](https://github.com/metacall/distributable-linux/issues/14), this will require generate an environment variable file based on `guix shell` and it will let us remove [the current approach used in the install script](https://github.com/metacall/install/blob/0f145d4ee5a60b58f7c48f043ed7d0b7d6268609/install.sh#L376).
+ - Solve problems with [existing languages not working](https://github.com/metacall/distributable-linux/issues/1), and extend it in order to support more languages, including extending support for [additional features](https://github.com/metacall/distributable-linux/issues/11).
+ - Improve support for embedders in order to have portable binaries that can be embedded easily into other languages like C/C++/Zig/Rust[[1]](https://github.com/metacall/distributable-linux/issues/15)[[2]](https://github.com/metacall/zig-example).
+ - Adding [new architectures](https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.70/html_node/Specifying-Target-Triplets.html#Specifying-Target-Triplets) to Linux with their respective tests (for this it is possible to use Docker multi-architecture for supporting those tests) and the install script support for those architectures.
+
+**Expected outcomes**: A better and more stable version of MetaCall Linux Distributable which addresses the current errors and user experience problems.
+
+**Possible mentors**: Vicente Eduardo Ferrer Garcia, Gil Arasa Verge
+
+**Resources**:
+ - Guix Shell: https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-shell.html
+ - Guix Build System options: https://guix.gnu.org/manual/en/html_node/Additional-Build-Options.html
+ - Docker Multi-Arch support: https://docs.docker.com/desktop/multi-arch/
+
+### MetaCall Deploy Integrations
+
+**Skills**: TypeScript, JavaScript
+
+**Expected size of the project**: Medium (175 hours)
+
+**Difficulty rating**: Medium
+
+**Description**:
+
+We have implemented support for [deployments through CLI](https://github.com/metacall/deploy) and now we require to integrate this CLI/Library into more environments in order to improve the development and adoption of MetaCall FaaS. For this there is a list of required tasks to do:
+
+ - Create a Visual Studio Extension for one click deployment so you don't even need to use the command line for deploying MetaCall projects.
+ - Create a GitHub action for integrating MetaCall deployments with your own CI if required.
+ - Create a library for exporting the current MetaCall Inspect format into OpenAPI format, so it can be used easily on other projects.
+ - ... TODO?
+
+**Expected outcomes**: TODO
+
+**Possible mentors**: Jose Antonio Dominguez
+
+**Resources**:
+  - TODO
+
+### Rust Actix + TypeScript React Server Side Rendering (tsx) Framework
+
+**Skills**: Rust, TypeScript, React
+
+**Expected size of the project**: Medium (175 hours)
+
+**Difficulty rating**: Medium
+
+**Description**:
+
+For this project there is two approaches that can offer different user experiences but having in mind a similar result which is to develop TSX on top of Rust, or basically having an ergonomic and high performance server side rendering for TypeScript written in Rust. The two approaches are the following:
+
+ 1) Recently MetaCall has provided support for [inlining other languages into Rust](https://github.com/metacall/core/blob/adcc50496d53797011b87f42131cb857d0009ffb/source/ports/rs_port/tests/inline_test.rs#L13) though its macro system. This allows adding languages like Python or TypeScript into Rust easily. The main idea of this project is to create a Proof of Concept of an Actix server that easily embeds Server Side Rendering with TypeScript. This should be like a small framework which uses MetaCall and allows writing endpoint handlers where you can embed TypeScript directly with simplicity. In order to achieve this, the Rust Port will need to be extended, adding extra functionality required.
+ 2) If the first approach becomes problematic because Rust macros are limited for this *hacky* task, we may also provide an alternate and simpler approach which fullfills the objective. Basically we should provide a server that is able to load TSX lambdas and render them out of the box. Those lamdas would be written in a separate file a part from Rust, in a folder. A similar approach that [Granian HTTP Server](https://github.com/emmett-framework/granian) has followed but mainly focused on TSX Server Side Rendering.
+
+Either using one or another approach, we should also support building static files and offer them with the Rust server, so we can have the complete lifecicle of development. For this we can embed [SWC](https://swc.rs/) which has great performance and it is written in Rust too.
+
+The Proof of Concept should contain also benchmarks, in order to compare it to other server side rendering solutions or in order to be the baseline for future optimizations in MetaCall TypeScript support. Adding documentation and examples is needed too, so it can be reused in the future by other users and the functionality and utility of the framework is shown. Finally some complete examples should be provided so other users can learn by example how to use the framework and how to extend it. It does not require to have full support for production development but at least our objective is to have a minimal Proof of Concept that works.
+
+**Expected outcomes**: A small framework based on Actix implementing server side rendering with React (TypeScript).
+
+**Possible mentors**: Thomas Rory Gummerson, Jose Antonio Dominguez, Alexandre Gimenez Fernandez
+
+**Resources**:
+ - MetaCall Rust Port Crate: https://docs.rs/metacall/latest/metacall/
+ - MetaCall Rust Port Source: https://github.com/metacall/core/tree/develop/source/ports/rs_port
+ - MetaCall FaaS SSR Example: https://github.com/metacall/basic-react-SSR-example
+
+### MetaCall ChatGPT Example Tutorial
+
+**Skills**: Python, TypeScript, JavaScript
+
+**Expected size of the project**: Medium (175 hours)
+
+**Difficulty rating**: Medium
+
+**Description**:
+
+TODO
+
+**Expected outcomes**: TODO
+
+**Possible mentors**: Jose Antonio Dominguez
+
+**Resources**:
+  - TODO
+
 ## Find Us
 
 The three chats are bridged by Matrix (messages sent from one, on the main room/channel, can be seen from all).
 
+ - Telegram:
+  <a href="https://t.me/joinchat/BMSVbBatp0Vi4s5l4VgUgg" alt="Telegram"><img src="https://img.shields.io/static/v1?label=metacall&message=join&color=blue&logo=telegram&style=flat" /></a>
 
-Telegram:
-<a href="https://t.me/joinchat/BMSVbBatp0Vi4s5l4VgUgg" alt="Telegram"><img src="https://img.shields.io/static/v1?label=metacall&message=join&color=blue&logo=telegram&style=flat" /></a>
-
-Discord: 
+ - Discord:
   <a href="https://discord.gg/upwP4mwJWa" alt="Discord"><img src="https://img.shields.io/discord/781987805974757426?label=discord&style=flat" /></a>
 
-Matrix:
+ - Matrix:
   <a href="https://matrix.to/#/#metacall:matrix.org" alt="Matrix"><img src="https://img.shields.io/matrix/metacall:matrix.org?label=matrix&style=flat" /></a>
