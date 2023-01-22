@@ -238,14 +238,26 @@ The Proof of Concept should contain also benchmarks, in order to compare it to o
 
 **Description**:
 
-TODO
+Its well known that ChatGPT is here to stay, 
+it represents a great tool for writing - and writing code is not the exception.
 
-**Expected outcomes**: TODO
+Unexpert users can ask the AI to generate code for them in seconds, thats really cool!
+Imagine they nail a big one and the code generated is exactly what they needed... 
+Now what? Where should I put this code?
+
+Only a few would know where to put this code in order to make it available to the world.
+At MetaCall we believe that the simplest way is through MetaCall Deploy platform (Hub), 
+where your code does not need any boilerplate in order to be transformed into a service.
+
+**Expected outcomes**:
+
+A clear example of the above is needed. Using chatGPT as the code generator, for making it available on the Hub.
 
 **Possible mentors**: Jose Antonio Dominguez
 
 **Resources**:
-  - TODO
+  - https://chat.openai.com/
+  - github.com/metacall/deploy
 
 ## Find Us
 
