@@ -187,13 +187,15 @@ At the moment of writing, Linux distributable is one of the best suited distribu
 **Description**:
 
 We have implemented support for [deployments through CLI](https://github.com/metacall/deploy) and now we require to integrate this CLI/Library into more environments in order to improve the development and adoption of MetaCall FaaS. For this there is a list of required tasks to do:
+- Visual Studio Extension
+- Github CI action
+- OpenAPI integration
+
+**Expected outcomes**: 
 
  - Create a Visual Studio Extension for one click deployment so you don't even need to use the command line for deploying MetaCall projects.
  - Create a GitHub action for integrating MetaCall deployments with your own CI if required.
  - Create a library for exporting the current MetaCall Inspect format into OpenAPI format, so it can be used easily on other projects.
- - ... TODO?
-
-**Expected outcomes**: TODO
 
 **Possible mentors**: Jose Antonio Dominguez
 
@@ -251,13 +253,16 @@ where your code does not need any boilerplate in order to be transformed into a 
 
 **Expected outcomes**:
 
-A clear example of the above is needed. Using chatGPT as the code generator, for making it available on the Hub.
+A clear blog post of the above is needed. Using chatGPT as the code generator, for making it available on the Hub.
+
+The example can be a full working service API or a Web App. 
+We wanted to leave `the what` open to choose, so it will be talked with the mentors. 
 
 **Possible mentors**: Jose Antonio Dominguez
 
 **Resources**:
   - https://chat.openai.com/
-  - github.com/metacall/deploy
+  - https://github.com/metacall/deploy
 
 ## Find Us
 
