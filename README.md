@@ -197,10 +197,11 @@ We have implemented support for [deployments through CLI](https://github.com/met
  - Create a GitHub action for integrating MetaCall deployments with your own CI if required.
  - Create a library for exporting the current MetaCall Inspect format into OpenAPI format, so it can be used easily on other projects.
 
-**Possible mentors**: Jose Antonio Dominguez
+**Possible mentors**: Jose Antonio Dominguez, Alexandre Gimenez Fernandez
 
 **Resources**:
-  - TODO
+  - Visual Code Extension: https://code.visualstudio.com/api/get-started/your-first-extension
+  - GitHub Action: https://docs.github.com/en/actions/creating-actions/publishing-actions-in-github-marketplace
 
 ### Rust Actix + TypeScript React Server Side Rendering (tsx) Framework
 
@@ -258,7 +259,7 @@ A clear blog post of the above is needed. Using chatGPT as the code generator, f
 The example can be a full working service API or a Web App. 
 We wanted to leave `the what` open to choose, so it will be talked with the mentors. 
 
-**Possible mentors**: Jose Antonio Dominguez
+**Possible mentors**: Jose Antonio Dominguez, Alexandre Gimenez Fernandez
 
 **Resources**:
   - https://chat.openai.com/
