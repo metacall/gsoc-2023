@@ -265,7 +265,7 @@ We wanted to leave `the what` open to choose, so it will be talked with the ment
   - https://chat.openai.com/
   - https://github.com/metacall/deploy
 
-### CI for Metacall's Exampple
+### MetaCall examples' CI
 
 **Skills**: GitHub Actions, Bash, Devops
 
@@ -275,12 +275,12 @@ We wanted to leave `the what` open to choose, so it will be talked with the ment
 
 **Description**:
 
-Currently there is no way to test all the examples and deployable examples of Metacall, So the goal is to create a comprehensive CI system for all the examples of the Metacall and Metacall FAAS, you would need to create a single repository for each version of the Metacall software. Each repository would download the distributables for each supported OS, clone the examples repositories from the Metacall's GitHub account, and run each example to test it. This would ensure that all examples are working correctly on all supported platforms.
+Currently there is no way to test all the examples and deployable examples of Metacall. The goal is to create a comprehensive CI system for all the examples of the core and Metacall FaaS, you would need to create a single repository for each Metacall version. Each repository would download the distributables for all supported operating systems, clone the example repositories from the Metacall's GitHub account, and run each example to test it. This would ensure that all examples are working correctly on all supported platforms for new releases.
 Similarly, the same process would be followed for the [@metacall/deploy](https://github.com/metacall/deploy) package, where deployable examples would be cloned and deployed to a FaaS website using Deploy CLI to ensure that they are working as expected. 
 
 **Expected outcomes**:
 
-The expected outcome will be a comprehensive testing and deployment system that ensures all examples for the Metacall and FAAS are working correctly on all supported platforms. This will provide confidence to users that the software is functioning as expected and will reduce the likelihood of issues arising in production. Additionally, this system could be used to automate future updates and releases, further streamlining the development process.
+The expected outcome will be a comprehensive testing and deployment system that ensures all examples for the Metacall and FaaS are working correctly on all supported platforms. This will provide confidence to users that the software is functioning as expected and will reduce the likelihood of issues arising in production. Additionally, this system could be used to automate future updates and releases, further streamlining the development process.
 
 Possible mentors: Vicente Eduardo Ferrer Garcia, Gil Arasa Verge
 
