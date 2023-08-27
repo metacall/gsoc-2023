@@ -7,27 +7,27 @@
 
 MetaCall is a **polyglot** runtime environment, which allows you to run **multiple programming languages** in the same project.
 For example, you can have a Node.js application that uses a Python script and a Ruby script, all in the same project.
-You can view more example and use cases from [here](https://github.com/metacall/examples)
+You can view more example and use cases from [here](https://github.com/metacall/examples).
 
-Furthermore, MetaCall represents a serverless runtime environment, also known as Function as a Service (FaaS), enabling you to execute your code within the cloud without the need to concern yourself with the underlying infrastructure. [Give it a try](https://metacall.io/)
+Furthermore, MetaCall represents a serverless runtime environment, also known as Function as a Service (FaaS), enabling you to execute your code within the cloud without the need to concern yourself with the underlying infrastructure. [Give it a try](https://metacall.io/).
 
 ## Idea Motivation
 
-MetaCall Core has an intensive test case that is mainly focused on Linux (including Sanitizers in order to detect memory, address, undefined behavior, or threading bugs). The main idea is to support multiple platforms and architectures with multiple compilers but the current baseline (Linux with GCC, Windows with MSVC, and MacOS with Clang; all on amd64 architecture) So, We will implement full CI/CD for macOS with the maximum amount of language support possible for now MetaCall has one for Linux and Windows
+MetaCall Core has an intensive test case that is mainly focused on Linux (including Sanitizers in order to detect memory, address, undefined behavior, or threading bugs). The main idea is to support multiple platforms and architectures with multiple compilers but with the current baseline: Linux with GCC, Windows with MSVC, and MacOS with Clang, all on amd64 architecture. So, we are going to implement full CI/CD for macOS with the maximum amount of language support possible for now MetaCall has one for Linux and Windows.
 
 ## Work done
 
 ### 1. Setup CI/CD for MacOS on Github Actions
 
-The CI file responsible for setting up the environment and configure any needed dependencies for MetaCall to be built correctly on MacOS. Also it removes any pre-installed dependencies that came with Github Runner that may cause conflicts with the build process.Further more it create a matrix with Debug & Release and No sanitizers, Address sanitizer and Thread Sanitizer to test it with different configurations.
+The CI file is responsible for setting up the environment and configuring any needed dependencies for MetaCall to be built correctly on MacOS. It also removes any pre-installed dependencies that came with Github Runner that may cause conflicts with the build process. Furthermore it creates a matrix with Debug & Release and No sanitizers, Address sanitizer and Thread Sanitizer to test it with different configurations.
 
 ### 2. Extend MetaCall Scripts
 
-Make metacall-environment.sh script support macOS besides Linux it checks if the OS is Linux or macOS and install the dependencies accordingly. Also it configures any needed CMAKE flags for the build process.
+Make metacall-environment.sh script support macOS besides Linux. It checks if the OS is Linux or macOS and installs the dependencies accordingly. Also, it configures any needed CMAKE flags for the build process.
 
 ### 3. Fix MacOS build issues
 
-With help of ORG mentors we were able to fix all MacOS build issues
+With help of ORG mentors we were able to fix all MacOS build issues.
 
 ## Pull Requests
 
