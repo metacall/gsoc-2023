@@ -12,15 +12,15 @@
 
 <p>The Metacall FaaS, which lets you deploy your functions into the Metacall dashboard, is another tool that Metacall offers.</p>
 
-<p>For those who don't understand what FaaS is, Let me explain :- <p>
+<p>For those who don't understand what FaaS is, let me explain :- <p>
 
 ```
-In simple words, As a developer, you don't need to worry about managing servers, devops, or anything else all you need is your functions (the application's entity), and Metacall FaaS will turn it into an API endpoint so you can use it anyway you like. So you can see how intriguing it is and how much time it will save you. Applications that previously took months to develop may now be created in as little as 4-5 hours because to the reduction in complex work.
+In simple words, as a developer, you don't need to worry about managing servers, devops, or anything else, all you need is your functions (the application's entity), and Metacall FaaS will turn it into an API endpoint so you can use it in any way you like. So you can see how intriguing it is and how much time it will save you. Applications that previously took months to develop may now be created in as little as 4-5 hours because of the reduction in complex/unnecessary work.
 ```
 
-Visit <a href="https://metacall.io/doc.html#/" >metacall.io</a> for more information on Metacal FaaS.
+Visit <a href="https://metacall.io/doc.html#/" >metacall.io</a> for more information on Metacall FaaS.
 
-So, Earlier the graphical interface of <a href="dashboard.metacall.io">dashboard.metacall.io</a> can be used to access the Faas service from Metacall in which you have to buy the plans to test the Faas, therefore in as a part of Google Summer of Code 2023, I set out to develop the whole Faas service which mimics the real Faas and developers can now easily test the behaviour of real Faas in their local environments(localhost).
+So, earlier the graphical interface of <a href="dashboard.metacall.io">dashboard.metacall.io</a> can be used to access the Faas service from Metacall in which you have to buy the plans to test the Faas, therefore as part of Google Summer of Code 2023, I set out to develop the whole Faas service which mimics the real Faas and developers can now easily test the behaviour of real Faas in their local environments (localhost).
 
 
 You can find our work on github <a href="https://github.com/metacall/faas">Metacall Faas</a>.
@@ -69,19 +69,16 @@ $ cd /faas && npm start
 
 `Step 4` :- In your terminal, execute - `metacall-deploy --workdir=PATH-TO-YOUR-APP-DIRECTORY --dev`
 
-<p>And your application will be deployed within no time deployed.</p>
-
-<p> Your application will be launched quickly.</p>
+<p>And your application will be deployed within no time.</p>
 
 ## Here is the quick video explanation for the whole process.
 
 [![Click to Play](https://i.ibb.co/Cm104BN/Screenshot-2023-08-27-201811.png)](https://youtu.be/UUPjUFgWmns)
 
 
-
 ## Work done for achieving all the things I mentioned above
 
-<p>The major goals of my GSoC with the metacall were completed. These goals were -</p>
+<p>The major goals of my GSoC with Metacall were completed. These goals were -</p>
 
 ### 1. Implementing all the handlers for the flags that can be expected from Metacall Deploy -
 
@@ -105,7 +102,7 @@ So the handlers for above flags are mentioned below
 
 
 ### 3. Other Works
-So till the end of GSOC 2023, I managed to make more than 17 commits and more than 5500 lines of code, Not only I contributed to this project, My work does'nt end here and I will be contributing and maintaining this repository completely till the end, I also contributed to other projects like ```Metacall Deploy``` & ```Metacall Protocol```, I was considered as one of the most autonomous dev of metacall, I always believed only code contributions are not only the way to support open source communities thats why I tried to collaborate with others and arranged meetups and tech talks for metacall.
+So till the end of GSOC 2023, I managed to make more than 17 commits and more than 5500 lines of code, not only I contributed to this project, my work doesn't end here and I will be contributing and maintaining this repository completely till the end, I also contributed to other projects like ```Metacall Deploy``` & ```Metacall Protocol```, I was considered as one of the most autonomous devs of Metacall, I always believed only code contributions are not only the way to support open source communities that's why I tried to collaborate with others and arranged meetups and tech talks for metacall.
 
 ## Conclusion
 
