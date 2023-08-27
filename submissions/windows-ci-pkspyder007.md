@@ -15,7 +15,7 @@
 - [Work Done](#list-of-prs-raised-during-the-project)
 
 ## Introduction
- MetaCall Core has a intensive test case which is mainly focused on Linux (including Sanitizers in order to detect memory, address, undefined behavior or threading bugs). Currently we are improving the Windows CI/CD support with MSVC.
+ MetaCall Core has an intensive test case which is mainly focused on Linux (including Sanitizers in order to detect memory, address, undefined behavior or threading bugs). Currently, we are improving the Windows CI/CD support with MSVC.
 
 ## Objectives
 - To implement and complete testing CI/CD for Windows to run with different compilers (MSVC for now).
@@ -24,7 +24,7 @@
 - Remove vendor lock-in for pipeline.
 
 ## Technologies Used
-A non exhaustive list of the tools, platforms, and technologies used in the project.
+A non-exhaustive list of the tools, platforms, and technologies used in the project:
 C/C++, CMake, Bash, Batch, PowerShell, Github, etc.
 
 ## Implementation
@@ -32,7 +32,7 @@ C/C++, CMake, Bash, Batch, PowerShell, Github, etc.
 ### Phase 1: Setup and Configuration
 The biggest blocker for starting the development of the project was to have the build running locally for windows to test changes since changes code and waiting for the CI to run was not efficient and consistent.
 
-I created a local environment that mimics the CI pipeline by updating the tools(scripts) that are responsible to build the metacall core.
+I created a local environment that mimics the CI pipeline by updating the tools (scripts) that are responsible to build Metacall core.
 
 I have written an article on [How to seetup Metacall development environment on windows](https://www.codu.co/articles/setting-up-metacall-development-environment-on-windows-jxk6iltl) to make it easier for new contributors to get up and running soon with the project.
 
@@ -45,25 +45,22 @@ Here is the PR for the required instrumentation [#394](https://github.com/metaca
 Example implementation PR for Ruby integration [#415](https://github.com/metacall/core/pull/415).
 
 ### Phase 3: Adding new languages and bugfixes
-At the time of writing we are having support for following languages in windows CI - `python, nodejs, java, ruby, typescript, wasm, rpc`.
+At the time of writing we are having support for the following languages in windows CI - `python, nodejs, java, ruby, typescript, wasm, rpc`.
 
 PRs for adding support for `file and C` loader are in progress, requiring investigation bug causes in the `core` itself.
 
-Remaining majorr languages which are not supported in windows CI are following
+Remaining major languages which are not supported in windows CI are the following:
 ```C / .Net / Rust```
 
 
 ## Results and Outcomes
-- More test coverage on windows.
+- Higher test coverage on windows.
 - Improved core due to bugfixes discovered during CI implementation.
 - No more patching required for CI
-- Closer to non vendor locking state.
+- Closer to no vendor lock-in state.
 
 ## Future Work
-The project still have some major languages missing from the CI like `C, Rust`. In future it would be great to support these languages as well.
-But the complexity of their implementation is high.
-
-Also we should look into windows distribution system for metacall.
+The project still has some major languages missing from the CI like `C, Rust`. In the future it would be great to support these languages as well, although the complexity of their implementation is substantial. Also we should look into a windows distribution system for metacall.
 
 
 ---
