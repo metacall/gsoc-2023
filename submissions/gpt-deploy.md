@@ -6,15 +6,12 @@
 
 ## Metacall GPT-FaaS
 
-<p>The Metacall FaaS, which lets you deploy your functions into the Metacall dashboard, is another tool that Metacall offers.</p>
+Metacall aims to provide a multi-language and multi-platform FaaS solution. It allows you to write functions in different programming languages and then deploy and execute those functions in a serverless environment. This can help simplify development and deployment processes, as you can choose the best-suited programming language for specific tasks without being limited to a single language.
 
-<p>For those who don't understand what FaaS is, let me explain :- <p>
+Metacall FaaS essentially acts as a bridge between different programming languages, allowing them to communicate and be executed seamlessly in a serverless context. This can be particularly useful in scenarios where different parts of an application are written in different languages or when developers want to leverage the strengths of various languages within the same project.
 
-```
-In simple words, as a developer, you don't need to worry about managing servers, devops, or anything else, all you need is your functions (the application's entity), and Metacall FaaS will turn it into an API endpoint so you can use it in any way you like. So you can see how intriguing it is and how much time it will save you. Applications that previously took months to develop may now be created in as little as 4-5 hours because of the reduction in complex/unnecessary work.
-```
 
-Visit <a href="https://metacall.io/doc.html#/" >metacall.io</a> for more information on Metacall FaaS.
+More about metacall FaaS <a href="https://metacall.io/doc.html#/" >metacall.io</a>
 
 
 ## Now What is GPT-Deploy
@@ -28,7 +25,7 @@ Visit <a href="https://metacall.io/doc.html#/" >metacall.io</a> for more informa
 - User can track his deployed files, remove deployments and do many manipulations to the deployments
 - UI has been provided to run the function-api that gets created without and POSTMAN client.
 
-## Work done for achieving all the things I mentioned above
+## Work done for achieving all the things I mentioned on proposal
 
 <p> All the goals proposed has been completed. I have created more features than I proposed. </p>  
 
@@ -60,12 +57,8 @@ Visit <a href="https://metacall.io/doc.html#/" >metacall.io</a> for more informa
 
 ## Conclusion
 
-Easy UI for several features has capability to change clients perspective of using metacall.
-
-There are a lot of learnings that come along with experience and familiarity with the core team and community. Collaboration and team effort are key for the success of any large-scale project.
-
-Community is really important. Never lose sight of the problem we're trying to solve, and constantly pay attention to the needs and worries community.
-
-Following design patterns and modifying pre-existing code help keep the application's consistency. Always create code that is easy to scale, manageable, and loosely connected.
-
-The most significant development in my career has definitely been GSoC and Metacall. I am really grateful to Google and Metacall for providing me with this fantastic platform. This opportunity has unquestionably had a profound effect on me. I've been able to advance from being an open-source contributor to an open-source maintainer because of it.
+- A user-friendly interface enhances the potential for altering clients' perspectives on Metacall through its various features.
+- Profound insights come hand in hand with experience and getting well-acquainted with the core team and the community. Collaborative efforts and teamwork stand as vital components in ensuring the success of any large-scale project.
+- The community holds immense significance. It's crucial to always keep the problem we're addressing in focus and consistently address the needs and concerns of the community.
+- By adhering to established design patterns and making adjustments to existing code, we can maintain a consistent user experience throughout the application. Strive to create code that is easily scalable, manageable, and loosely interconnected.
+- Reflecting on my career journey, participating in GSoC and my involvement with Metacall stand out as the most pivotal developments. I hold deep gratitude towards Google and the Metacall team for offering me such an exceptional platform. This opportunity has undoubtedly had a profound influence on me, propelling my progression from being an open-source contributor to an open-source maintainer.
