@@ -11,7 +11,7 @@ Metacall aims to provide a multi-language and multi-platform FaaS solution. It a
 Metacall FaaS essentially acts as a bridge between different programming languages, allowing them to communicate and be executed seamlessly in a serverless context. This can be particularly useful in scenarios where different parts of an application are written in different languages or when developers want to leverage the strengths of various languages within the same project.
 
 
-More about metacall FaaS <a href="https://metacall.io/doc.html#/" >metacall.io</a>
+More about metacall FaaS at <a href="https://metacall.io/doc.html#/" >metacall.io</a>
 
 
 ## Now What is GPT-Deploy
@@ -55,7 +55,7 @@ More about metacall FaaS <a href="https://metacall.io/doc.html#/" >metacall.io</
 ![image](https://github.com/metacall/gsoc-2023/assets/66236446/a26335d1-ee2c-45cb-8fa6-d64687de8a6a)
 ![image](https://github.com/metacall/gsoc-2023/assets/66236446/aacf9e5f-18c0-4caf-8d6f-dc5c9033f196)
 
-## Conclusion
+## Learnings
 
 - A user-friendly interface enhances the potential for altering clients' perspectives on Metacall through its various features.
 - Profound insights come hand in hand with experience and getting well-acquainted with the core team and the community. Collaborative efforts and teamwork stand as vital components in ensuring the success of any large-scale project.
